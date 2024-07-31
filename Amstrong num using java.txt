@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class Main{
+    public static void main(String []args){
+        Scanner mkc=new Scanner(System.in);
+        int a=mkc.nextInt();
+        int rem=0;
+        int sum=0;
+        int count=0;
+        int temp=a;
+        int t=temp;
+        while(a>0){
+            a=a/10;
+            count++;
+        }
+        while(temp>0){
+            rem=temp%10;
+            sum=sum+(int)Math.pow(rem,count);
+            temp=temp/10;
+        }
+        System.out.println(sum);
+        System.out.println((sum==t)?"amstrong number":"Not amstrong number");
+    }
+}
